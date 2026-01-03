@@ -171,7 +171,14 @@
     </Bscmake>
     <PostBuildEvent>
       <Command>xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\bin" "$(OutDir)"
-xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)Data\"</Command>
+xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)Data\"
+copy /y "$(SolutionDir)bin\wzAudio.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\glew32.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\ogg.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\vorbisfile.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\MuJS.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\config.ini" "$(OutDir)"
+xcopy  /s /r /y /q "$(SolutionDir)bin\Data" "$(OutDir)Data\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Global Debug|x64'">
@@ -235,7 +242,14 @@ xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtime
     </Bscmake>
     <PostBuildEvent>
       <Command>xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\bin" "$(OutDir)"
-xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)"</Command>
+xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)"
+copy /y "$(SolutionDir)bin\wzAudio.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\glew32.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\ogg.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\vorbisfile.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\MuJS.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\config.ini" "$(OutDir)"
+xcopy  /s /r /y /q "$(SolutionDir)bin\Data" "$(OutDir)Data\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Global Release|Win32'">
@@ -298,7 +312,14 @@ xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtime
     </Bscmake>
     <PostBuildEvent>
       <Command>xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\bin" "$(OutDir)"
-xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)Data\"</Command>
+copy /y "$(SolutionDir)bin\wzAudio.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\glew32.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\ogg.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\vorbisfile.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\MuJS.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\config.ini" "$(OutDir)"
+xcopy  /s /r /y /q "$(SolutionDir)bin\Data" "$(OutDir)Data\"
+copy /y "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)Data\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Global Release|x64'">
@@ -364,7 +385,14 @@ xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtime
     </Bscmake>
     <PostBuildEvent>
       <Command>xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\bin" "$(OutDir)"
-xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)"</Command>
+xcopy  /s /r /y /q "$(SolutionDir)dependencies\netcore\Native.NETHostFxr.runtimeconfig.json" "$(OutDir)"
+copy /y "$(SolutionDir)bin\wzAudio.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\glew32.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\ogg.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\vorbisfile.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\MuJS.dll" "$(OutDir)"
+copy /y "$(SolutionDir)bin\config.ini" "$(OutDir)"
+xcopy  /s /r /y /q "$(SolutionDir)bin\Data" "$(OutDir)Data\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

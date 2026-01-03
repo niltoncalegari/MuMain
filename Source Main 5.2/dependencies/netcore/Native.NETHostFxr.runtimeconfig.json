@@ -3,8 +3,9 @@
     "tfm": "net7.0",
     "framework": {
       "name": "Microsoft.NETCore.App",
-      "version": "7.0.5"
+      "version": "7.0.1"
     },
+    "rollForward": "Minor",
     "configProperties": {
       "System.GC.Concurrent": false,
       "System.Threading.ThreadPool.MinThreads": 4,

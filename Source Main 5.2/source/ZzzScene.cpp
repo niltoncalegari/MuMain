@@ -104,7 +104,8 @@ bool EnableEdit    = false;
 
 int g_iLengthAuthorityCode = 20;
 
-char* szServerIpAddress = "192.168.0.168";
+char* szServerIpAddress = "127.0.0.1";
+//char *szServerIpAddress = "192.168.0.168";
 //char *szServerIpAddress = "210.181.89.215";
 WORD g_ServerPort = 44405;
 
@@ -263,8 +264,8 @@ bool CheckAbuseNameFilter(char* Text)
 bool CheckName()
 {
     if (CheckAbuseNameFilter(InputText[0]) || CheckAbuseFilter(InputText[0]) ||
-        FindText(InputText[0], " ") || FindText(InputText[0], "¡¡") ||
-        FindText(InputText[0], ".") || FindText(InputText[0], "¡¤") || FindText(InputText[0], "¡­") ||
+        FindText(InputText[0], " ") || FindText(InputText[0], "ï¿½ï¿½") ||
+        FindText(InputText[0], ".") || FindText(InputText[0], "ï¿½ï¿½") || FindText(InputText[0], "ï¿½ï¿½") ||
         FindText(InputText[0], "Webzen") || FindText(InputText[0], "WebZen") || FindText(InputText[0], "webzen") || FindText(InputText[0], "WEBZEN") ||
         FindText(InputText[0], GlobalText[457]) || FindText(InputText[0], GlobalText[458]))
         return true;
@@ -1369,7 +1370,7 @@ bool NewRenderLogInScene(HDC hDC)
     if (CCameraMove::GetInstancePtr()->IsTourMode())
     {
 #ifndef PJH_NEW_SERVER_SELECT_MAP
-        // È­¸é Èå¸®±â
+        // È­ï¿½ï¿½ ï¿½å¸®ï¿½ï¿½
         EnableAlphaBlend4();
         glColor4f(0.7f, 0.7f, 0.7f, 1.0f);
         float fScale = (sinf(WorldTime * 0.0005f) + 1.f) * 0.00011f;
@@ -1381,17 +1382,17 @@ bool NewRenderLogInScene(HDC hDC)
         fScale = (sinf(WorldTime * 0.0015f) + 1.f) * 0.00021f;
         RenderBitmapLocalRotate(BITMAP_CHROME + 4, 320.0f, 240.0f, 1150.0f, 1150.0f, fAngle, fScale * 512.f, fScale * 512.f, (512.f) / 512.f - fScale * 2 * 512.f, (512.f) / 512.f - fScale * 2 * 512.f);
 
-        // À§¾Æ·¡ ÀÚ¸£±â
+        // ï¿½ï¿½ï¿½Æ·ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½
         EnableAlphaTest();
         glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
         RenderColor(0, 0, 640, 25);
         RenderColor(0, 480 - 25, 640, 25);
 
-        // È­¸éÄ¥
+        // È­ï¿½ï¿½Ä¥
         glColor4f(0.0f, 0.0f, 0.0f, 0.2f);
         RenderColor(0, 25, 640, 430);
 #endif //PJH_NEW_SERVER_SELECT_MAP
-        // ¹Â·Î°í
+        // ï¿½Â·Î°ï¿½
         g_fMULogoAlpha += 0.02f;
         if (g_fMULogoAlpha > 10.0f) g_fMULogoAlpha = 10.0f;
 
